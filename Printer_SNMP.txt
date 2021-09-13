@@ -1,0 +1,58 @@
+if_mib_printer:
+  auth:
+    community: public
+  walk:
+  - 1.3.6.1.4.1.367.3.2.1.2.19.5.1.5
+  - 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9
+  get:
+  - 1.3.6.1.2.1.43
+  - 1.3.6.1.4.1.367.3.2.1.2.19
+  - 1.3.6.1.4.1.367.3.2.1.7
+  - 1.3.6.1.4.1.367.3.2.1.2
+  - 1.3.6.1.4.1.367.3.2.1.2
+  - 1.3.6.1.4.1.367.3.2.1.1.1.10.0
+  metrics:
+  - name: networkPrinterModelName
+    oid: 1.3.6.1.4.1.367.3.2.1.1.1.1.0
+    type: DisplayString
+    help: Model of device
+  - name: networkPrinterSerialNum
+    oid: 1.3.6.1.4.1.367.3.2.1.2.1.4.0
+    type: DisplayString
+    help: Serial printer device
+  - name: networkPrinterMIBVer
+    oid: 1.3.6.1.4.1.367.3.2.1.1.1.10.0
+    type: DisplayString
+    help: MIB Version
+  - name: networkPrinterFirmware
+    oid: 1.3.6.1.4.1.367.3.2.1.1.1.2.0
+    type: Float
+    help: MIB Version
+  - name: networkPrinterTotal
+    oid: 1.3.6.1.4.1.367.3.2.1.2.19.1.0
+    type: gauge
+    help: Total Number - Print Copy
+  - name: networkPrinterPrintedTotal
+    oid: 1.3.6.1.4.1.367.3.2.1.2.19.2.0
+    type: gauge
+    help: Total Printed
+  - name: networkPrinterCopiedTotal
+    oid: 1.3.6.1.4.1.367.3.2.1.2.19.4.0
+    type: gauge
+    help: Total Copied
+  - name: networkPrinterPrintedBlackWhite
+    oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.9
+    type: gauge
+    help: Total Printed no color
+  - name: networkPrinterPrintedFullColor
+    oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.11
+    type: gauge
+    help: Total Printed no colour    
+  - name: networkPrinterCopiedBlackWhite
+    oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.3
+    type: gauge
+    help: Total Copied no color
+  - name: networkPrinterCopiedColor
+    oid: 1.3.6.1.4.1.367.3.2.1.2.19.5.1.9.5
+    type: gauge
+    help: Total Copied color    
